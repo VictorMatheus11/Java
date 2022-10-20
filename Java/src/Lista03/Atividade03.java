@@ -4,38 +4,32 @@
  */
 package Lista03;
 
-import java.util.Scanner;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author mteixeira
  */
 public class Atividade03 {
     
-    public static void main(String[] args) {
+    public static void main(String args[]) 
+    {
         
-        int positivo;
-        int negativo;
-        int num;
-        int cont = 1;
-        
-        Scanner teclado = new Scanner (System.in);
-        System.out.println("Digite o 1° número");
-                
-        num = teclado.nextInt();
-                
-        while (cont <=20){
-        
-            
-            cont++;
-        
+        double positivo = 0;
+        double negativo = 0;
+        double num = 0;
+        for(int i=1; i<=20;i++)
+        {
+            num = Double.parseDouble(JOptionPane.showInputDialog("digite o "+i+". Numero"));
+            if (num > 0)
+                positivo = positivo + num;
+            else if (num < 0) negativo = negativo + num;
         }
-        teclado.close();
-        
-        
-        
-        
-        
+           
+            
+        JOptionPaneOptionPane.showMessageDialog(null,"dos 20 numeros lidos, a soma dos posistivo é "+positivo+" "
+            + "e a soma dos negativos é" + negativo);
     }
-    
 }
+    
+
+    
